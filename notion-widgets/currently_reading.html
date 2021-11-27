@@ -17,14 +17,9 @@
                 display: none;
             }
 
-            div[class^="test"] {
-                background: #ffff00;
-            }
-
             div[class^="gr_custom_container"] {
                 padding: 10px 5px 10px 5px;
                 background-color: transparent;
-                color: #000000;
             }
 
             div[class^="gr_custom_each_container"] {
@@ -64,10 +59,31 @@
                 color: gray;
             }
 
-            a:link,
-            a:visited {
-                color: #000;
-                text-decoration: none;
+            @media (prefers-color-scheme: dark) {
+                html, body {
+                    color: #fff;
+                    background-color: #2f3437;
+                }
+
+                a:link,
+                a:visited {
+                    color: #fff;
+                    text-decoration: none;
+                }
+
+            }
+
+            @media (prefers-color-scheme: light) {
+                html, body {
+                    color: #000;
+                    background-color: #fff;
+                }
+    
+                a:link,
+                a:visited {
+                    color: #000;
+                    text-decoration: none;
+                }
             }
         </style>
     </head>
